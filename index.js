@@ -19,7 +19,10 @@ const io = new Server(server, {
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://queue-management-system-nblk15hix-geeths-projects-5e4a8b6a.vercel.app', // Updated to frontend URL
+  methods: ['GET', 'POST'],
+}));
 app.use(express.json());
 
 // MongoDB connection
