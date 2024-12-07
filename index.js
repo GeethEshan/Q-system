@@ -13,14 +13,14 @@ const server = http.createServer(app);
 // Set up Socket.IO with CORS configuration
 const io = new Server(server, {
   cors: {
-    origin: 'https://queue-management-system-six.vercel.app', // Updated to the frontend URL
+    origin: 'https://queue-fe-eight.vercel.app', // Updated to the frontend URL
     methods: ['GET', 'POST'],
   },
 });
 
 // Middleware
 app.use(cors({
-  origin: 'https://queue-management-system-six.vercel.app', // Updated to frontend URL
+  origin: 'https://queue-fe-eight.vercel.app', // Updated to frontend URL
   methods: ['GET', 'POST'],
 }));
 app.use(express.json());
