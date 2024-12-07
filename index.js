@@ -13,7 +13,8 @@ const server = http.createServer(app);
 // Set up Socket.IO with CORS configuration
 const io = new Server(server, {
   cors: {
-    origin: '*', // Change this to your frontend domain in production
+    origin: 'https://queue-management-system-nblk15hix-geeths-projects-5e4a8b6a.vercel.app', // Updated to the frontend URL
+    methods: ['GET', 'POST'],
   },
 });
 
